@@ -106,7 +106,7 @@ Send any command without a link (`/l`, `/m`, `/ytdl`...) to get a button menu th
 ## 🚀 Deploy
 
 ```bash
-git clone -b wzgram https://github.com/Tj-Bots/Leech-TJ && cd Leech-TJ
+git clone -b wzgram https://github.com/Moviesuploader/Leech-TJ && cd Leech-TJ
 cp config_sample.env config.env   # fill BOT_TOKEN, OWNER_ID, TELEGRAM_API, TELEGRAM_HASH
 docker compose up -d --build
 ```
