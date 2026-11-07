@@ -111,6 +111,9 @@ cp config_sample.env config.env   # fill BOT_TOKEN, OWNER_ID, TELEGRAM_API, TELE
 docker compose up -d --build
 ```
 
+The default host ports are `18181` (web) and `18282` (torrent selector). User accounts, thumbnails, rclone configs and cookies are stored under `./data/`. The temporary download directory is cleared on startup by the cleanup routine.
+```
+
 Updating a running bot: set `UPSTREAM_REPO` / `UPSTREAM_BRANCH` and `/restart`.
 New Python packages need a rebuild: `docker compose up -d --build`.
 
