@@ -31,10 +31,10 @@ services:
     build: .
     #network_mode: "service:gluetun" #If using VPN, Remove the Hash from first and fill up Above Details.
     command: bash start.sh
-    restart: on-failure
+    restart: unless-stopped
     ports:
-      - "8181:80"
-      - "8282:8080"
+      - "${LEECH_TJ_WEB_PORT:-18181}:80"
+      - "${LEECH_TJ_TORRENT_PORT:-18282}:8080"
     volumes:
       - /dev/null:/root/.lk21-requests-cache.sqlite
     logging:
