@@ -37,6 +37,11 @@ services:
       - "${LEECH_TJ_TORRENT_PORT:-18282}:8080"
     volumes:
       - /dev/null:/root/.lk21-requests-cache.sqlite
+      - ./data/downloads:/usr/src/app/downloads
+      - ./data/accounts:/usr/src/app/accounts
+      - ./data/Thumbnails:/usr/src/app/Thumbnails
+      - ./data/rclone:/usr/src/app/rclone
+      - ./data/cookies:/usr/src/app/cookies
     logging:
       driver: "json-file"
       options:
